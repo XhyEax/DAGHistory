@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8AAD8708-885D-436A-AE1F-2F6475C6151F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAGHistory</RootNamespace>
+    <AssemblyName>DAGHistory</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mirror">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\Mirror.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mirror.Components">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\Mirror.Components.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\netstandard.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Loader.cs" />
+    <Compile Include="ToolBar.cs" />
+    <Compile Include="RoomData.cs" />
+    <Compile Include="Util\MyHook.cs" />
+    <Compile Include="Util\MyLog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\CodeEncoder.cs" />
+    <Compile Include="ProxyClass\LobbyChatProxy.cs" />
+    <Compile Include="ProxyClass\LobbyPlayerInfoProxy.cs" />
+    <Compile Include="UnityHook\HookPool.cs" />
+    <Compile Include="UnityHook\IL2CPPHelper.cs" />
+    <Compile Include="UnityHook\LDasm.cs" />
+    <Compile Include="UnityHook\MethodHook.cs" />
+    <Compile Include="UnityHook\PinnedLog.cs" />
+    <Compile Include="Util\RoomUtil.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
