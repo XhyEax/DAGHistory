@@ -42,6 +42,7 @@
     </Reference>
     <Reference Include="Mirror.Components">
       <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\Mirror.Components.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>D:\Games\SteamLibrary\steamapps\common\Draw &amp; Guess\Draw&amp;Guess_Data\Managed\netstandard.dll</HintPath>
